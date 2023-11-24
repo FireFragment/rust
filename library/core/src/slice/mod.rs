@@ -2830,7 +2830,7 @@ impl<T> [T] {
     /// assert_eq!(s.binary_search_by(|probe| probe.cmp(&seek)), Err(13));
     /// let seek = 1;
     /// let r = s.binary_search_by(|probe| probe.cmp(&seek));
-    /// assert!(match r { Ok(1..=4) => true, _ => false, });
+    /// assert!(matches(r, Ok(1..=4)));
     /// ```
     #[stable(feature = "rust1", since = "1.0.0")]
     #[inline]
